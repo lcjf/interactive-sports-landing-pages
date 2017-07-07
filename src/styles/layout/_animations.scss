@@ -1,0 +1,285 @@
+// Button sheen
+.sheen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle farthest-side at 0 0, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, .8) 98%, rgba(255, 255, 255, 0) 100%) no-repeat;
+    background-position: -320px 0;
+    background-repeat: no-repeat;
+}
+
+// CTAs
+.cta {
+    transform: translateX(-100%);
+    visibility: hidden;
+    @include bp-md {
+        transform: translateY(-100%);
+    }
+}
+
+.join-now-cta {
+    transform: scale(.95);
+    visibility: hidden;
+}
+
+// Images from the left and right
+.slide-left,
+.slide-right {
+    img {
+        position: absolute;
+        max-width: none;
+        visibility: hidden;
+    }
+}
+
+// Matches table (Sports only)
+.matches-table {
+    visibility: hidden;
+    transform: scale(0.95);
+    @include bp-md {
+//        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+// Cards (Interactive Casino only)
+.card {
+    visibility: hidden;
+    transform: scale(.8);
+    perspective: 800px;
+}
+
+// Casino Static
+#red-chip-left {
+    top: -23px;
+    right: 217px;
+    z-index: $z-red-chip-left;
+    @include bp-lg {
+        top: -15px;
+        right: 152px;
+        width: 94px;
+    }
+    @include bp-md {
+        top: -10px;
+        right: 78px;
+        width: 48px;
+    }
+}
+
+#yellow-chip-left {
+    top: 93px;
+    right: 257px;
+    @include bp-lg {
+        top: 65px;
+        right: 180px;
+        width: 46px;
+    }
+    @include bp-md {
+        top: 35px;
+        right: 90px;
+        width: 49px;
+    }
+}
+
+#card-symbols-left {
+    top: 189px;
+    right: 189px;
+    @include bp-lg {
+        top: 136px;
+        right: 135px;
+        width: 87px;
+    }
+    @include bp-md {
+        top: 71px;
+        right: 67px;
+        width: 48px;
+    }
+}
+
+#girl-left {
+    bottom: 0;
+    right: -3px;
+    z-index: $z-girl-left;
+    @include bp-lg {
+        right: -3px;
+        width: 197px;
+    }
+    @include bp-md {
+        right: 0;
+        width: 100px;
+    }
+}
+
+#red-chip-right {
+    top: -22px;
+    left: -18px;
+    z-index: $z-red-chip-right;
+    @include bp-lg {
+        top: -16px;
+        left: -12px;
+        width: 84px;
+    }
+    @include bp-md {
+        top: -9px;
+        left: -7px;
+        width: 43px;
+    }
+}
+
+#blue-chip-right {
+    bottom: 0;
+    left: 223px;
+    @include bp-lg {
+        bottom: 0;
+        left: 154px;
+        width: 74px;
+    }
+    @include bp-lg {
+        bottom: 0;
+        left: 74px;
+        width: 38px;
+    }
+}
+
+#cards-right {
+    top: -15px;
+    left: 100px;
+    @include bp-lg {
+        top: -15px;
+        left: 110px;
+        width: 180px;
+    }
+    @include bp-md {
+        top: -7px;
+        left: 50px;
+        width: 93px;
+    }
+}
+
+#card-symbols-right {
+    top: 82px;
+    left: 260px;
+    z-index: $z-card-symbols-right;
+    @include bp-lg {
+        top: 60px;
+        left: 194px;
+        width: 94px;
+    }
+    @include bp-md {
+        top: 27px;
+        left: 92px;
+        width: 50px;
+    }
+}
+
+#girl-right {
+    bottom: 0;
+    left: -25px;
+    z-index: $z-girl-right;
+    @include bp-lg {
+        bottom: 0;
+        left: -15px;
+        width: 266px;
+    }
+    @include bp-md {
+        left: -15px;
+        width: 137px;
+    }
+}
+
+// Casino Interactive
+.casino-interactive {
+    #red-chip-left {
+        @include bp-md {
+            top: 0px;
+            right: 111px;
+            width: 58px;
+        }
+    }
+    #yellow-chip-left {
+        @include bp-md {
+            top: 57px;
+            right: 126px;
+            width: 55px;
+        }
+    }
+    #card-symbols-left {
+        @include bp-md {
+            top: 111px;
+            right: 90px;
+            width: 78px;
+        }
+    }
+    #girl-left {
+        @include bp-md {
+            right: -14px;
+            width: 156px;
+            bottom: -46px;
+        }
+    }
+    #red-chip-right {
+        @include bp-md {
+            display: none;
+        }
+    }
+    #blue-chip-right {
+        @include bp-lg {
+            display: none;
+        }
+    }
+    #cards-right {
+        @include bp-md {
+            top: -6px;
+            left: 44px;
+            width: 154px;
+            z-index: $z-casino-interactive-cards-right-md;
+        }
+    }
+    #card-symbols-right {
+        @include bp-md {
+            display: none;
+        }
+    }
+    #girl-right {
+        @include bp-md {
+            left: -33px;
+            width: 210px;
+            bottom: -36px;
+            z-index: $z-casino-interactive-girl-right-md;
+        }
+    }
+}
+
+// Casino Interactive LP
+#footballer-left {
+    top: 19px;
+    right: -86px;
+    z-index: $z-footballer-left;
+    @include bp-lg {
+        top: 93px;
+        right: -84px;
+        width: 366px;
+    }
+    @include bp-md {
+        top: 31px;
+        right: -36px;
+        width: 154px;
+    }
+}
+
+#footballer-right {
+    top: -14px;
+    left: -4px;
+    z-index: $z-footballer-right;
+    @include bp-lg {
+        top: 57px;
+        left: -8px;
+    }
+    @include bp-md {
+        top: 19px;
+        left: 10px;
+        width: 67px;
+    }
+}

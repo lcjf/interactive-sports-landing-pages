@@ -1,0 +1,191 @@
+.casino-interactive {
+    .main {
+        @include bp-md {
+            height: 245px;
+            padding-bottom: 483px;
+            background-size: cover;
+        }
+    }
+    .heading-wrapper {
+        width: 612px;
+        display: inline-block;
+        @include bp-lg {
+            width: 360px;
+            padding: 0 8px;
+        }
+        @include bp-md {
+            position: absolute;
+            top: 186px;
+            left: 0;
+            height: 278px;
+            width: 100%;
+            z-index: $casino-interactive-h1-md;
+        }
+        span {
+            line-height: 1.3;
+            margin: .5em 0;
+            display: inline-block;
+            text-overflow: wrap;
+            @include bp-lg {
+                margin: .6em 0;
+            }
+            @include bp-md {
+                padding: 0 30px;
+                margin: .85em 0;
+            }
+        }
+    }
+    .slide-left,
+    .slide-right {
+        width: 279px;
+        @include bp-lg {
+            width: 204px;
+        }
+        @include bp-md {
+            width: 160px;
+            height: 186px;
+        }
+    }
+}
+
+// Interactive cards
+.cards-wrapper {
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+    left: 50%;
+    min-height: 200px;
+    @include bp-lg {
+        bottom: 15px;
+    }
+    @include bp-lg {
+        bottom: 20px;
+    }
+}
+
+.card-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -70px;
+    width: 140px;
+    height: 210px;
+    cursor: pointer;
+    @include bp-lg {
+        margin-left: -55px;
+        width: 110px;
+        height: 151px;
+    }
+    @include bp-lg {
+        margin-left: -50px;
+        width: 100px;
+        height: 137px;
+    }
+    &:first-of-type {
+        transform: translateX(-100%);
+    }
+    &:last-of-type {
+        transform: translateX(100%);
+    }
+}
+
+.casino-interactive .card {
+    margin: 0 10px;
+    width: 130px;
+    @include bp-lg {
+        margin: 0 5px;
+        width: auto;
+    }
+    .card-face {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .front {
+        z-index: $z-front-card;
+    }
+    span {
+        @include font-size(26px);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: 0;
+        color: $crimson;
+        @include bp-lg {
+            @include font-size(18px);
+        }
+    }
+    &:nth-of-type(2) span {
+        color: $black;
+    }
+}
+
+.card-wrapper:nth-of-type(2) span {
+    color: $black;
+}
+
+// HTML5 Video
+.video-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $z-video-overlay;
+    visibility: hidden;
+}
+
+video,
+#msg {
+    width: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 800px;
+    visibility: hidden;
+    opacity: 0;
+    padding: 1em 10px;
+    z-index: $z-video;
+}
+
+.msg-wrapper {
+    width: 768px;
+    max-width: 96%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 1em;
+    color: $white;
+    line-height: 1.5;
+    z-index: $z-video;
+    > span {
+        letter-spacing: 0;
+        clear: both;
+        width: 100%;
+        display: inline-block;
+        &:first-of-type {
+            @include font-size(28px);
+            line-height: 1.1;
+            margin-bottom: 1em;
+        }
+        &:nth-of-type(2) {
+            @include font-size(20px);
+            line-height: 1.1;
+            margin-bottom: 1em;
+        }
+        &:nth-of-type(3) {
+            margin-bottom: 1em;
+        }
+    }
+    a {
+        @include font-size(20px);
+        line-height: 1.1;
+        color: $white;
+        text-decoration: underline;
+    }
+}

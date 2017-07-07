@@ -1,0 +1,169 @@
+// Default styles applied Casino LPs
+// Buttons
+.btn {
+    @include font-size(28px);
+    background-color: $supernova;
+    display: block;
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+    color: $cod-gray;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: filter .2s ease-out;
+    @include bp-lg {
+        @include font-size(24px);
+    }
+    &:hover,
+    &:active {
+        -webkit-filter: brightness(120%);
+        filter: brightness(120%);
+    }
+}
+
+// Top section wrapper
+.main {
+    @include tahoma;
+    padding-top: 64px;
+    width: 100%;
+    float: left;
+    position: relative;
+    height: 469px;
+    background-size: 2560px 405px;
+    background-repeat: repeat-y;
+    background-position: center 64px;
+    background-image: url('dist/assets/img/casino-bg.jpg');
+    overflow: hidden;
+    @include bp-lg {
+        height: 349px;
+    }
+    @include bp-md {
+        height: 205px;
+        padding-top: 59px;
+        background-position: center 59px;
+    }
+    .inner {
+        @include bp-md {
+            margin: 0 auto;
+            width: 320px;
+        }
+    }
+}
+
+// Animated image containers
+.slide-left,
+.slide-right {
+    width: 417px;
+    height: 405px;
+    float: left;
+    position: relative;
+    @include bp-lg {
+        width: 266px;
+        height: 285px;
+    }
+    @include bp-md {
+        width: 100px;
+        height: 146px;
+    }
+}
+
+// Big red call to action
+.heading-wrapper,
+.msg-wrapper {
+    font-weight: 700;
+    width: 336px;
+    height: 360px;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+    border: 10px solid $husk;
+    background-color: $crimson;
+    text-align: center;
+    letter-spacing: -1px;
+    margin: 22px 0;
+    z-index: $z-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    @include bp-lg {
+        width: 235px;
+        height: 257px;
+        border: 8px solid $husk;
+        margin: 14px 0;
+        padding: 0 10px;
+    }
+    @include bp-md {
+        width: 120px;
+        height: 130px;
+        border: 4px solid $husk;
+        margin: 8px 0;
+        padding: 0 5px;
+    }
+    > .heading {
+        max-width: 100%;
+        display: block;
+    }
+    span {
+        display: inline-block;
+        &.h1-extra-large {
+            @include font-size(105px);
+            line-height: .8;
+            @include bp-lg {
+                @include font-size(75px);
+            }
+            @include bp-md {
+                @include font-size(40px);
+            }
+        }
+        &.h1-large {
+            @include font-size(57px);
+            @include bp-lg {
+                @include font-size(40px);
+            }
+            @include bp-md {
+                @include font-size(20px);
+            }
+        }
+        &.h1-small {
+            @include font-size(53px);
+            @include bp-lg {
+                @include font-size(38px);
+            }
+            @include bp-md {
+                @include font-size(20px);
+                margin-top: -3px;
+            }
+        }
+        &.h1-medium {
+            @include font-size(76px);
+            @include bp-lg {
+                @include font-size(54px);
+            }
+            @include bp-md {
+                @include font-size(28px);
+                margin-top: -3px;
+            }
+        }
+        &.h1-extra-small {
+            @include font-size(31px);
+            @include bp-lg {
+                @include font-size(20px);
+            }
+            @include bp-md {
+                margin-top: -3px;
+            }
+        }
+        &.h1-extra-extra-small {
+            @include font-size(26px);
+            @include bp-lg {
+                @include font-size(18px);
+            }
+            @include bp-md {
+                margin-top: -3px;
+            }
+        }
+    }
+}

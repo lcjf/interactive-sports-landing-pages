@@ -1,0 +1,53 @@
+footer {
+    text-align: center;
+    @include tahoma;
+    @include font-size(12px);
+}
+
+.footer-top {
+    background-color: $comet;
+    .inner {
+        margin: 2em auto;
+        @include bp-md {
+            padding: 0 10px;
+        }
+    }
+    p {
+        line-height: 1.5;
+    }
+}
+
+.footer-bottom {
+    color: $comet;
+    text-align: center;
+    span {
+        margin: 1.25em 0;
+        display: inline-block;
+    }
+    p {
+        padding: .75em 0 1.25em;
+        display: inline-block;
+        @include bp-md {
+            max-width: 200px;
+            line-height: 2;
+        }
+        a {
+            color: #7d9bcf;
+            text-decoration: underline;
+        }
+        img {
+            display: inline-block;
+            margin-left: 8px;
+            margin-bottom: -8px;
+        }
+    }
+    .payment-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            display: block;
+            margin: 0 3px;
+        }
+    }
+}

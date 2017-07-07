@@ -1,0 +1,64 @@
+html {
+    @include font-size(16px);
+}
+
+body {
+    @include font-smoothing;
+    @include arial;
+    background-color: $rhino;
+    color: $white;
+    height: 100%;
+    min-height: 100%;
+}
+
+.fw {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.inner {
+    @include clearfix;
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    @include bp-lg {
+        width: 768px;
+    }
+    @include bp-md {
+        width: 100%;
+    }
+}
+
+// Dev menu
+.menu-wrapper {
+    width: 100%;
+    float: left;
+    padding: 80px 0 20px 20px;
+    h1 {
+        @include font-size(30px);
+        line-height: 1.25;
+        margin-bottom: 1em;
+    }
+    h2 {
+        @include font-size(20px);
+        line-height: 1.25;
+        margin-top: .5em;
+        text-decoration: underline;
+    }
+    ul {
+        @include font-size(18px);
+        line-height: 1.25;
+        list-style-type: square;
+    }
+    li {
+        width: 100%;
+        list-style: square;
+        margin-left: 50px;
+        a {
+            padding: .25em .5em;
+            color: $white;
+            display: inline-block;
+        }
+    }
+}

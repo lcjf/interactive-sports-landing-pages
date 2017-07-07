@@ -1,0 +1,20 @@
+header {
+    position: absolute;
+    height: 64px;
+    width: 100%;
+    background-color: $dark-rhino;
+    z-index: $z-header;
+    @include bp-md {
+        height: 59px;
+    }
+    a {
+        display: block;
+    }
+    img {
+        height: 40px;
+        margin: 12px auto;
+        @include bp-md {
+            height: 35px;
+        }
+    }
+}
